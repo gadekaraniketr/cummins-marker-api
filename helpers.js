@@ -10,3 +10,5 @@ function generateApiKey() {
     }
     return apiKey;
 }
+
+export { generateApiKey };

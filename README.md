@@ -48,7 +48,7 @@ cummins-marker-api\
 |-- server.js\
 |-- helpers.js\
 |-- start-cummins-marker-api-service.bat\
-|-- package.jason
+|-- package.json
 
 
 # Deployment

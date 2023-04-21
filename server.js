@@ -1,18 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const https = require('https');
 const fs = require('fs');
 
 // Define API key and create MySQL connection
-const API_KEY = process.env.API_KEY || 'default_key';
+const API_KEY = 'yBzCrziWxiHeLaqliBDzT2Oy0xqQGWqd';
 
 // Database connectivity
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
-  database: 'mydb'
+  password: 'root',
+  database: 'cummins'
 });
 
 // Create express app and apply middleware
@@ -31,8 +31,8 @@ const apiKeyMiddleware = (req, res, next) => {
 };
 
 // Routes for users API
-app.get('/api/users', apiKeyMiddleware, (req, res) => {
-  const sql = 'SELECT * FROM users';
+app.get('/api/mark_log', apiKeyMiddleware, (req, res) => {
+  const sql = 'SELECT * FROM `mark_log` ORDER BY `mark_time` DESC LIMIT 10';
   db.query(sql, (err, results) => {
     if (err) {
       console.error(err);
