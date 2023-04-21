@@ -41,11 +41,13 @@ Start the server
 
 # Folder Structure
 
-cummins-marker-api/
-|-- \certs
-|   |-- server-cert.pem
-|   |-- server-key.pem
-|-- server.js
+cummins-marker-api\
+|-- /certs\
+|&emsp;|-- server-cert.pem\
+|&emsp;|-- server-key.pem\
+|-- server.js\
+|-- helpers.js\
+|-- start-cummins-marker-api-service.bat\
 |-- package.jason
 
 
